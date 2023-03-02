@@ -17,9 +17,11 @@ function mayoriaDeEdad(edad) {
    // Si tiene 18 años ó más debe retornar el string: "Allowed".
    // Caso contrario: "Not allowed".
    // Tu código:
-   if( edad => 18 ){
+   if( edad >= 18 ){
       return 'Allowed'
-   } else return 'Not allowed';
+   } else if(edad = 17 ){
+      return 'Not allowed';
+   }
 }
 
 function conection(status) {
@@ -116,6 +118,13 @@ function fizzBuzz(num) {
    // Si "num" es divisible entre 3 y 5 (ambos), retorna "fizzbuzz".
    // De lo contrario, retorna false.
    // Tu código:
+   if(num % 3 === 0 && num % 5 === 0){
+      return 'fizzbuzz';
+   }else if(num % 5 === 0){
+      return 'buzz';
+   }else if(num % 3 === 0){
+      return 'fizz';
+   }else return false;
 }
 
 function operadoresLogicos(num1, num2, num3) {
@@ -144,18 +153,34 @@ function esPrimo(num) {
    // [Pista 2]: puedes resolverlo utilizando un `bucle for`.
    // [Nota]: los números negativos, 0 y 1 NO son números primos.
    // Tu código:
+      if (num <= 1) {
+         return false;
+         }
+      for (let i = 2; i <= Math.sqrt(num); i++) {
+         if (num % i === 0){
+            return false;
+         }
+      } return true;
 }
 
 function esVerdadero(valor) {
    // Si "valor" es verdadero retornar "Soy verdadero".
    // Caso contrario, retornar "Soy falso".
    // Tu código:
+   if(valor === true){
+      return 'Soy verdadero';
+   }else return 'Soy falso';
 }
 
 function tieneTresDigitos(num) {
    // Si el número recibido tiene tres dígitos retornar true.
    // Caso contrario, retornar false.
    // Tu código:
+   if(num > -1000 && num < -99){
+      return true;
+   }else  if(num > 99 && num < 1000){
+      return true;
+   }else return false;
 }
 
 function doWhile(num) {
@@ -163,6 +188,13 @@ function doWhile(num) {
    // Retornar el valor final.
    // Utilizar el bucle Do-While.
    // Tu código:
+   var i = 0;
+   do{
+      num += 5;
+      i ++;
+   } while (i < 8){
+      return num;
+   }
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
