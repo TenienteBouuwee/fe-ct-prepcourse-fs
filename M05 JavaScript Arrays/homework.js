@@ -100,8 +100,14 @@ function multiplicarArgumentos() {
    // Si no se pasan argumentos retorna 0. Si se pasa un argumento, simplemente retórnalo.
    // [PISTA]: "arguments" es un arreglo.
    // Tu código:
-   if
-
+   if(arguments.length < 1){
+      return 0;
+   }
+   total = 1;
+   for(i = 0 ; i < arguments.length ; i++){
+      total = total * arguments[i];
+   }
+   return total;
 }
 
 function cuentoElementos(array) {
@@ -204,8 +210,8 @@ function breakStatement(num) {
    for(i=0 ; i < 10 ; i++){
       num += 2;
       nuevoA[i] = num;
-      if(num === i){
-         return 'Se interrumpio la ejecucion';
+      if(num === i ){
+         return 'Se interrumpió la ejecución';
          break;
       }
    }
@@ -220,7 +226,15 @@ function continueStatement(num) {
    // [PISTA]: utiliza el statement 'continue'.
    // Tu código:
    nuevoA = [];
-   
+   for(i=0 ; i < 10 ; i++){
+      if(i === 5){
+         continue;
+         }else{
+         num += 2;
+         nuevoA.push(num);
+      }
+   }
+   return nuevoA;
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
