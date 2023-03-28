@@ -100,6 +100,7 @@ function multiplicarArgumentos() {
    // Si no se pasan argumentos retorna 0. Si se pasa un argumento, simplemente retórnalo.
    // [PISTA]: "arguments" es un arreglo.
    // Tu código:
+   if
 
 }
 
@@ -199,6 +200,16 @@ function breakStatement(num) {
    // la ejecución y retornar el string: "Se interrumpió la ejecución".
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
+   nuevoA= [];
+   for(i=0 ; i < 10 ; i++){
+      num += 2;
+      nuevoA[i] = num;
+      if(num === i){
+         return 'Se interrumpio la ejecucion';
+         break;
+      }
+   }
+   return nuevoA;
 }
 
 function continueStatement(num) {
@@ -208,6 +219,8 @@ function continueStatement(num) {
    // se continua con la siguiente iteración.
    // [PISTA]: utiliza el statement 'continue'.
    // Tu código:
+   nuevoA = [];
+   
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
